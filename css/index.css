@@ -4,6 +4,12 @@
     --text : black;
 }
 
+.page, #edit, #code {
+    display: none;
+}
+
+
+
 nav {
     display: flex;
     justify-content: space-evenly;
@@ -44,4 +50,10 @@ nav a:hover::before {
     flex-direction: column;
     justify-content: center;
     background-image: url(../);
+}
+
+.buttons {
+    margin: 5vh auto 2vh auto;
+    display: flex;
+    justify-content: center;
 }
