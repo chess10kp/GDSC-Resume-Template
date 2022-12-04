@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/_index.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <title>Portfolio Builder</title>
 </head>
@@ -15,23 +16,20 @@
     <input type="text" class="form-control" id="Input1" placeholder="Your name">
         <input type="text" class="form-control" id="Input2" placeholder="About me">
 
-        <input type="text" class="form-control" placeholder="Title of work"">
-        <textarea class="form-control" rows="3" placeholder="Describe your experience"></textarea>
-        <input type="text" class="form-link"  placeholder="Link">
 
-        <input type="text" class="form-control"  placeholder="Title of work"">
-        <textarea class="form-control" rows="3" placeholder="Describe your experience"></textarea>
-        <input type="text" class="form-link"  placeholder="Link">
-
-        <input type="text" class="form-control"  placeholder="Title of work"">
-        <textarea class="form-control" rows="3" placeholder="Describe your experience"></textarea>
-        <input type="text" class="form-link"  placeholder="Link">
-
-
-
+    <div class="work_collection">
+        <div id="workitems">
+            <div class="workitem">
+            <input type="text" class="form-control" placeholder="Title of work"">
+            <textarea class="form-control" rows="3" placeholder="Describe your experience"></textarea>
+            <input type="text" class="form-link"  placeholder="Link">
+            </div>      
+        </div>
+        <button class="btn btn-danger" id="add-experience">Add project</button>
+        <button class="btn btn-danger" id="remove-experience">Remove project</button>
         <button class="btn btn-primary" id="submit-btn">Submit</button>
     </div>
-  
+    </div>  
     <div class="page">
               <nav>
             <a>About</a>
@@ -49,49 +47,8 @@
             </div>
         </section>
         <section id="work">
-            <div class="container mt-3">
-                <h1 class="text-center">Portfolio</h1>
-                <div class="row">
-                    <div class="col-lg-4 mt-4">
-                        <div class="card">
-
-                            <h4 class="card-title output">Title</h4>
-                            <p class="card-text output"></p>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-dark link">Link</a>
-                            </div>
-                        </div>
-                    </div>
-
-                <div class="col-lg-4 mt-4">
-                    <div class="card">
-                        <!--<img class="card-img-top" src="" alt="Card image" style="width:100%">
-                    <div class="card-body">-->
-                        <h4 class="card-title output">Title</h4>
-                        <p class="card-text output">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
-                            rerum perspiciatis, tempore corrupti a perferendis, neque ipsum ex maxime repudiandae
-                            vel et eos reprehenderit nobis voluptate quis unde quasi quaerat.</p>
-                        <div class="text-center">
-                            <a href="#" class="btn btn-dark link">Link</a>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 mt-4">
-                    <div class="card">    
-
-                        <h4 class="card-title output">Title</h4>
-                        <p class="card-text output">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
-                            rerum perspiciatis, tempore corrupti a perferendis, neque ipsum ex maxime repudiandae
-                            vel et eos reprehenderit nobis voluptate quis unde quasi quaerat.</p>
-                        <div class="text-center">
-                            <a href="#" class="btn btn-dark link">Link</a>
-
-                        </div>
-                    </div>
-                    </div>
-                </div>
+            <div class="container mt-3" id="workdiv">
+                <h1 class="text-center">Portfolio</h1> 
             </div>
         </section>
 

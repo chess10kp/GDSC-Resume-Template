@@ -1,11 +1,11 @@
 let forms = document.querySelectorAll(".form-control")
 let submit = document.querySelector("#submit-btn")
-let outputs = document.querySelectorAll(".output")
-let form_links = document.querySelectorAll(".form-link")
 let links = document.querySelectorAll(".link")
 let form_div = document.querySelector(".form")
 let page_div = document.querySelector(".page")
 let code_dump = document.querySelector("#code-dump")
+let outputs = document.querySelectorAll(".output")
+let form_links = document.querySelectorAll(".form-link")
 
 
 function selectElementText(el, win) {
@@ -30,11 +30,30 @@ $("#submit-btn").click(function(){
     $("#edit").toggle()
     $("#code").toggle()
 
-    for (let i = 0; i < forms.length; i++)
+for (let i = 0; i < 2; i++)
 {
-    console.log(forms[i].value)
     outputs[i].textContent = forms[i].value
 }
+if (workcount!=document.getElementsByClassName("card").length){
+    for (let i = 0; i<workcount; i++)
+    {
+        d = document.createElement('div')
+        d.innerHTML = '<div class="col-lg-12 mt-12"><div class="card"><h4 class="card-title output">Title</h4><p class="card-text output"></p><div class="text-center"><a href="#" class="btn btn-dark link">Link</a></div></div></div>'
+        document.getElementById("workdiv").appendChild(d)
+    }
+}
+
+forms = document.querySelectorAll(".form-control")
+outputs = document.querySelectorAll(".output")
+form_links = document.querySelectorAll(".form-link") //refreshing list of divs and forms
+links = document.querySelectorAll(".link")
+
+for (let i = 2; i < forms.length; i++)
+{
+    outputs[i].textContent = forms[i].value
+}
+
+
     for (let i = 0; i < form_links.length; i++)
     {
         if (form_links[i].value.startsWith('https://'))
@@ -42,9 +61,7 @@ $("#submit-btn").click(function(){
         else if (form_links[i].value.startsWith('http://'))
         links[i].href =form_links[i].value;
         else 
-        links[i].href ="https://"+ form_links[i].value;
-
-        console.log(links[i].href)
+        links[i].href ="https://"+ form_links[i].value;        
     }
 
 })
@@ -72,4 +89,18 @@ $("#code").click(function(){
     $("#code").toggle()
     code_dump.textContent = code;
     selectElementText(code_dump)
+})
+
+let workcount = 1;
+$("#add-experience").click(function(){
+    let d = document.createElement("div");
+    d.className = "workitem";
+    d.innerHTML = '<input type="text" class="form-control" placeholder="Title of work""><textarea class="form-control" rows="3" placeholder="Describe your experience"></textarea><input type="text" class="form-link"  placeholder="Link">'
+    document.getElementById("workitems").appendChild(d)
+    workcount+=1
+})
+
+$("#remove-experience").click(function(){
+    document.getElementById("workitems").removeChild(document.getElementById("workitems").lastElementChild)
+    workcount-=1
 })
