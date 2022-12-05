@@ -24,6 +24,20 @@ function selectElementText(el, win) {
     }
 }
 
+let workcount = 1;
+$("#add-experience").click(function(){
+    let d = document.createElement("div");
+    d.className = "workitem";
+    d.innerHTML = '<input type="text" class="form-control" placeholder="Title of project"><textarea class="form-control" rows="3" placeholder="Describe the project"></textarea><input type="text" class="form-link"  placeholder="Link">'
+    document.getElementById("workitems").appendChild(d)
+    workcount+=1
+})
+
+$("#remove-experience").click(function(){
+    document.getElementById("workitems").removeChild(document.getElementById("workitems").lastElementChild)
+    workcount-=1
+})
+
 $("#submit-btn").click(function(){
     $(".page").toggle()
     $(".form").toggle()
@@ -108,16 +122,3 @@ $("#code").click(function(){ //scraping my own site
     selectElementText(code_dump)
 })
 
-let workcount = 1;
-$("#add-experience").click(function(){
-    let d = document.createElement("div");
-    d.className = "workitem";
-    d.innerHTML = '<input type="text" class="form-control" placeholder="Title of work""><textarea class="form-control" rows="3" placeholder="Describe your experience"></textarea><input type="text" class="form-link"  placeholder="Link">'
-    document.getElementById("workitems").appendChild(d)
-    workcount+=1
-})
-
-$("#remove-experience").click(function(){
-    document.getElementById("workitems").removeChild(document.getElementById("workitems").lastElementChild)
-    workcount-=1
-})
