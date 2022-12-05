@@ -1,10 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 
-:root{
-    --main : white;
-    --text : black;
+:root {
+    --main: white;
+    --text: black;
+    --accent: black;
 }
 
-.page, #edit, #code {
+body {
+    font-family: "Raleway", sans-serif !important;
+}
+
+.page,
+#edit,
+#code {
     display: none;
 }
 
@@ -13,14 +21,14 @@
 nav {
     display: flex;
     justify-content: space-evenly;
-    box-shadow: 0 0 5px 0 ;
+    box-shadow: 0 0 5px 0;
     padding: 2vh 0 2vh 0;
 }
 
 nav a {
- position: relative;
- color: var(--text);
- text-decoration: none;   
+    position: relative;
+    color: var(--text);
+    text-decoration: none;
 }
 
 nav a:hover {
@@ -58,3 +66,27 @@ nav a:hover::before {
     justify-content: center;
 }
 
+#about {
+    background-color: var(--accent);
+    color: var(--main);
+    padding: 5vh 3vw 5vh 3vw;
+}
+
+.icontact-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2vh 0 2vh 0;
+    margin: 0 auto 0 auto;
+    background-color: var(--accent);
+}
+.contact-div {
+    background-color: black;
+    color: white;
+    padding: 3vh 0 3vh 0;
+}
+
+
+ .icontact-link {
+    color: white !important;
+    text-decoration: none !important;
+ }

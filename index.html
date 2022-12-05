@@ -8,15 +8,21 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/_index.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Portfolio Builder</title>
 </head>
 
 <body>
     <div class="form">
     <input type="text" class="form-control" id="Input1" placeholder="Your name">
-        <input type="text" class="form-control" id="Input2" placeholder="About me">
+    <input type="text" class="form-control" id="Input2" placeholder="One phrase to describe you">
 
-
+    <div class="contact-forms">
+        <input type="email" class="form-control" placeholder="email">
+        <input type="tel" class="form-control" placeholder="Github username">
+        <input type="text" class="form-control" placeholder="instagram username">
+        <textarea class="form-control"required rows="3" placeholder="About me: Skills, Hobbies, etc."></textarea>
+    </div>
     <div class="work_collection">
         <div id="workitems">
             <div class="workitem">
@@ -32,9 +38,9 @@
     </div>  
     <div class="page">
               <nav>
-            <a>About</a>
+            <a href="#about">About</a>
             <a href="#work">Work</a>
-            <a>Contact</a>
+            <a href="#contact">Contact</a>
         </nav>
         <section class="landing_page" id="home">
             <div class="container-fluid">
@@ -46,13 +52,39 @@
                 </div>
             </div>
         </section>
+
+        <section id="about">
+            <h2>My Name</h2>
+            <hr style="width:200px">
+        <p class="about-p">
+        </p>
+        </section>
+
         <section id="work">
             <div class="container mt-3" id="workdiv">
                 <h1 class="text-center">Portfolio</h1> 
             </div>
         </section>
 
+        <hr style="width:100%">
+        <section id="contact">
+            <div class="container mt-3 contact-div">
+                <h2 class="text-center">Contact Me</h2>
+                <div class="icontact-container">
+                <div class="icontact">
+                    <a id="mail" class="icontact-link"><i class="fa-solid fa-envelope fa-2xl" style="font-size: 2em;"></i></a>
+                </div>
+                <div class="icontact">
+                <a class="icontact-link" id="github" ><i class="fa-solid fa-github fa-2xl" style="font-size: 2em;"></i></a>
+                </div >
 
+                <div class="icontact">
+                    <a id="instagram" class="icontact-link"><i class="fa-solid fa-instagram fa-2xl" style="font-size: 2em;"></i></a>
+                </div>
+                </div>
+                
+            </div>
+        </section>
     </div>
 
     <div class="buttons">
