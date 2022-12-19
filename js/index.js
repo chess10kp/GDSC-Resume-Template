@@ -59,8 +59,8 @@ contactlink[1].href ="https://github.com/"+ forms[3].value;
 
 if (forms[4]!="")
 contactlink[2].href ="https://instagram.com/"+ forms[4].value;
-else 
-$(contactlink[2]).remove();
+    else 
+    $(contactlink[2]).remove();
 
 if (forms[5].value !=""){
 document.querySelector(".about-p").textContent =forms[5].value 
