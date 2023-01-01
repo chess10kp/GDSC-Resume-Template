@@ -8,6 +8,7 @@
 
 body {
     font-family: "Raleway", sans-serif !important;
+    background-color: var(--main) !important;
 }
 
 .page,
@@ -16,7 +17,14 @@ body {
     display: none;
 }
 
+.form , .form-link{
+    background-color: var(--main) !important;
+    color: var(--text) !important;
+}
 
+.form-control {
+    background-color: var(--main) !important;
+}
 
 nav {
     display: flex;

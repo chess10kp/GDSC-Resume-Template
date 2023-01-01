@@ -6,7 +6,10 @@ let page_div = document.querySelector(".page")
 let code_dump = document.querySelector("#code-dump")
 let outputs = document.querySelectorAll(".output")
 let form_links = document.querySelectorAll(".form-link")
+let colors = document.querySelector(":root")
+let mode_icon = document.querySelector("#darkmode")
 
+let dark_mode_state = false;
 
 function selectElementText(el, win) {
     win = win || window;
@@ -122,3 +125,32 @@ $("#code").click(function(){ //scraping my own site
     selectElementText(code_dump)
 })
 
+function modeToggleDark()
+{
+    console.log(colors)
+    colors.style.setProperty("--main", "#1D2A35")
+    colors.style.setProperty("--text", "white")
+}
+
+function modeToggleLight()
+{
+    colors.style.setProperty("--main", "white")
+    colors.style.setProperty("--text", "black")
+}
+$("#darkmode").click( function(){
+    if (!dark_mode_state)
+    {
+    modeToggleDark();
+    dark_mode_state = true;
+    mode_icon.style.background = "#1D2A35";
+    mode_icon.style.color = "white";
+    }
+    else 
+    {
+        modeToggleLight();
+        dark_mode_state = false;
+    mode_icon.style.background = "white";
+    mode_icon.style.color = "#1D2A35";
+    }
+})
+// TODO: fix dark mode look for web page
