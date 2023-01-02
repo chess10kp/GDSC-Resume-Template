@@ -46,6 +46,10 @@ $("#submit-btn").click(function(){
     $(".form").toggle()
     $("#edit").toggle()
     $("#code").toggle()
+    if (dark_mode_state)
+    {
+        modeToggleLight()
+    }
 
 for (let i = 0; i < 2; i++)
 {
@@ -136,6 +140,8 @@ function modeToggleLight()
 {
     colors.style.setProperty("--main", "white")
     colors.style.setProperty("--text", "black")
+    mode_icon.style.background = "white";
+    mode_icon.style.color = "#1D2A35";
 }
 $("#darkmode").click( function(){
     if (!dark_mode_state)
@@ -149,8 +155,9 @@ $("#darkmode").click( function(){
     {
         modeToggleLight();
         dark_mode_state = false;
-    mode_icon.style.background = "white";
-    mode_icon.style.color = "#1D2A35";
+    
     }
 })
+
+
 // TODO: fix dark mode look for web page

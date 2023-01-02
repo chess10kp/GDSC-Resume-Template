@@ -24,6 +24,7 @@ body {
 
 .form-control {
     background-color: var(--main) !important;
+    color: var(--text);
 }
 
 nav {
