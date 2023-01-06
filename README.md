@@ -1,2 +1,2 @@
 # GDSC-Resume-Template
-Portfolio template generator. Modify to your own liking.
+Portfolio template generator. Generated templates can be modified easily.
